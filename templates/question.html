@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="/assessments">Go Back</a>
+<h6>This is Question {{ question_title }} with number {{ question_number }} of Test {{ test }}</h6>
+
+{% if last %}
+
+<a href="#"><button>Finish</button></a>
+
+{% else %}
+
+<a href="/assessment/{{ test }}/{{ question_number+1 }}"><button>Next</button></a>
+
+{% endif%}
+
+{% endblock content %}

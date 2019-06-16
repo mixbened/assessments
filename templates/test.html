@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<a href="/assessments">Go Back</a>
+<h5>So, you are about to Start Test: {{ test }}</h5>
+<h6>This Test has {{ count }} questions</h6>
+<a href="/assessment/{{ test }}/{{ question_number }}"><button>Start Test</button></a>
+
+
+{% endblock content %}

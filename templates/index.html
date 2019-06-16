@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" action="/assessments">
+    <input type="text" name="id" placeholder="Enter a Key" required>
+    <button type="submit">Start</button>
+</form>
+
+<form method="get" action="/generate">
+    <h2>No Key? Get a new one</h2>
+    <button type="submit">Generate Key</button>
+</form>
+
+{% if key %}
+
+<h3>New Key {{ key }}</h3>
+<p>Be careful, save this key somewhere, your progress is only trackable by this link</p>
+
+{% endif %}
+
+{% if error %}
+
+<script>alert({{ error }})</script>
+
+{% endif %}
+
+{% endblock content %}
