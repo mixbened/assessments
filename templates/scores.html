@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h5>Your Results:</h5>
+
+  {% for result in result_list %}
+
+    <div class="list-group list-group-flush">
+
+        <a class="list-group-item">
+          <div class="row">
+            <div class="col-6">
+              {{ result.test_title }}
+            </div>
+            <div class="col-6">
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: {{ result.score_percent }}%" aria-valuenow="{{ result.score_percent }}" aria-valuemin="0" aria-valuemax="100">{{ result.score_percent }}%</div>
+              </div>
+            </div>
+          </div>
+
+        </a>
+
+    </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock content %}

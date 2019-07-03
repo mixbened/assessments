@@ -2,21 +2,26 @@
 
 {% block content %}
 
-<h2>Assessments for you:</h2>
-
 <div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="list-group list-group-flush">
+                <h5>Assessments available:</h5>
+                {% for test in assessments %}
 
-    <div class="list-group">
-        {% for test in assessments %}
+                <a href="/assessment/{{ test }}" class="list-group-item list-group-item-action">{{ test }}</a>
 
-          <a href="/assessment/{{ test }}" class="list-group-item list-group-item-action">{{ test }}</a>
-
-        {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
-
+    <div class="row mt-5">
+        <div class="col">
+            <h5>You already finished {{ results_count }} tests: </h5>
+            <hr>
+            <a href="/scores"><button type="button" class="btn btn-outline-success">See Results</button></a>
+        </div>
+    </div>
 </div>
-
-<span class="key">Your key: {{ key }}</span>
-
 
 {% endblock content %}

@@ -3,19 +3,20 @@
 {% block content %}
 
 <form method="post" action="/assessments">
-    <input type="text" name="id" placeholder="Enter a Key" required>
-    <button type="submit">Start</button>
-</form>
-
-<form method="get" action="/generate">
-    <h2>No Key? Get a new one</h2>
-    <button type="submit">Generate Key</button>
+    <div class="form-group">
+        <input type="text" name="id" class="form-control" placeholder="Enter a Key" required>
+    </div>
+    <button class="btn btn-success" type="submit">Start</button>
+    <form method="get" action="/generate">
+        <button class="btn btn-primary" type="submit">Generate Key</button>
+    </form>
 </form>
 
 {% if key %}
 
-<h3>New Key {{ key }}</h3>
-<p>Be careful, save this key somewhere, your progress is only trackable by this link</p>
+<div class="alert alert-dark" role="alert">
+  This is your key: <span class="badge badge-success">{{ key }}</span> - Save it somewhere
+</div>
 
 {% endif %}
 

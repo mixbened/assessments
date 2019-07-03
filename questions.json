@@ -6,5 +6,21 @@
     "a3": "It's an akronym from the Inventors",
     "correct": "a1",
     "test": "HTML & CSS Basics"
+  },
+  {
+    "title": "Wie kann ich in HTML ELementen Attribute geben?",
+    "a1": "Innerhalb des (öfnenden) HTML Tags: <body style:'color: red'>...</body>",
+    "a2": "Direkt nach dem HTML Tag: <body> style:'color: red'>...</body>",
+    "a3": "Innerhalb des (öffnenden) HTML Tags: <body style='color: red'>...</body>",
+    "correct": "a1",
+    "test": "HTML & CSS Basics"
+  },
+  {
+    "title": "Wie deklariere ich eine Variable korrekt?",
+    "a1": "var text = 'Hello World'",
+    "a2": "text = Hello World",
+    "a3": "text = 'Hello World'",
+    "correct": "a3",
+    "test": "Python Basics"
   }
 ]

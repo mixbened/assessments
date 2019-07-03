@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    min-height: 100vh;
 }
 
 iframe {
@@ -25,4 +26,42 @@ h1 {
     right: 0;
     padding: 1em;
     font-size: 0.8em;
+}
+
+.color {
+    color: #444;
+}
+
+.home-button {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    font-size: 2em;
+}
+
+.content {
+    padding: 5em;
+    text-align: center;
+}
+
+.answers {
+    margin: 5% 0;
+}
+
+.answers > label {
+    padding: 5%;
+    border: 1px solid #444;
+    margin: 2% auto;
+    width: 50%;
+    text-align: left;
+}
+
+.question {
+    padding-left: 2%;
+}
+
+@media (max-width: 768px) {
+    .content {
+        font-size: 2rem;
+    }
 }

@@ -1,4 +1,4 @@
-from models import User, Test, Question, db
+from models import User, Test, Question, db, Score
 import json
 
 def create_db():
@@ -18,6 +18,17 @@ def create_db():
                 question = Question(title=entry['title'], a1=entry['a1'], a2=entry['a2'], a3=entry['a3'], correct=entry['correct'], test_id=test_object.id)
                 db.add(question)
                 db.commit()
+
+def save_result(session,test_id,questions_total,questions_correct):
+    user_id = db.query(User).filter_by(session_token=session).first().id
+    result = Score(user_id=user_id,test_id=test_id,questions_total=questions_total,questions_correct=questions_correct)
+    db.add(result)
+    db.commit()
+
+def get_results(id):
+    scores = db.query(Score).filter_by(user_id=id).all()
+    count = len(scores)
+    return count, scores
 
 if __name__ == '__main__':
     main()

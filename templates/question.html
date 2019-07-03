@@ -1,18 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="content">
+<a class="home-button" href="/assessments"><span class="oi oi-home color" title="home" aria-hidden="true"></span></a>
 
-<a href="/assessments">Go Back</a>
-<h6>This is Question {{ question_title }} with number {{ question_number }} of Test {{ test }}</h6>
+<h6>{{ question_title }}</h6>
 
-{% if last %}
+<form action="/assessment/{{ test_name }}/{{ question_number+1 }}" method="post">
+    <div class="answers">
+        <label>
+            <input name="question" type="radio" value="a1"/>
+            <span>  {{ a1 }}</span>
+        </label>
+        <label>
+            <input name="question" type="radio" value="a2"/>
+            <span>  {{ a2 }}</span>
+        </label>
+        <label>
+            <input name="question" type="radio" value="a3"/>
+            <span>  {{ a3 }}</span>
+        </label>
+    </div>
 
-<a href="#"><button>Finish</button></a>
+    {% if last %}
 
-{% else %}
+    <button type="submit">Finish</button>
 
-<a href="/assessment/{{ test }}/{{ question_number+1 }}"><button>Next</button></a>
+    {% else %}
 
-{% endif%}
+    <button type="submit">Next</button>
 
+    {% endif%}
+    </div>
+</form>
 {% endblock content %}

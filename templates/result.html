@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+
+<a class="home-button" href="/assessments"><span class="oi oi-home color" title="home" aria-hidden="true"></span></a>
+<h5>Cool, you have finished {{ test_name }}</h5>
+<div class="progress">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: {{ score_percent }}%" aria-valuenow="{{ score_percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="text-left">{{ questions_correct }} / {{ questions_total }} Correct</div>
+
+</div>
+{% endblock content %}
