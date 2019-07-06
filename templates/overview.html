@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col">
             <div class="list-group list-group-flush">
-                <h5>Assessments available:</h5>
+                <h5 style="border: 0">Assessments available:</h5>
                 {% for test in assessments %}
 
                 <a href="/assessment/{{ test }}" class="list-group-item list-group-item-action">{{ test }}</a>
@@ -18,8 +18,7 @@
     <div class="row mt-5">
         <div class="col">
             <h5>You already finished {{ results_count }} tests: </h5>
-            <hr>
-            <a href="/scores"><button type="button" class="btn btn-outline-success">See Results</button></a>
+            <a href="/scores"><button type="button" class="btn btn-info">See Results</button></a>
         </div>
     </div>
 </div>

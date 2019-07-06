@@ -1,21 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form method="post" action="/assessments">
-    <div class="form-group">
-        <input type="text" name="id" class="form-control" placeholder="Enter a Key" required>
-    </div>
-    <button class="btn btn-success" type="submit">Start</button>
-    <form method="get" action="/generate">
-        <button class="btn btn-primary" type="submit">Generate Key</button>
-    </form>
-</form>
-
+        <form method="post" action="/assessments">
+            <input type="text" name="id" class="form-control key-input" placeholder="Enter a Key" required>
+            <button class="btn btn-info" type="submit">Start</button>
+        </form>
+        <form style="display: inline;" method="get" action="/generate">
+            <button class="btn btn-outline-secondary" type="submit">Generate Key</button>
+        </form>
 {% if key %}
 
-<div class="alert alert-dark" role="alert">
-  This is your key: <span class="badge badge-success">{{ key }}</span> - Save it somewhere
+<div class="alert alert-primary" role="alert">
+  This is your key: <span class="badge badge-success">{{ key }}</span> - Save it somewhere <a style="text-decoration: underline; color: white;" href="/key-info">more Info</a>
 </div>
 
 {% endif %}

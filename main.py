@@ -8,8 +8,8 @@ from queries import create_db, save_result, get_results
 app = Flask(__name__)
 
 # database utilities
-# db.drop_all()
-# db.create_all()
+#db.drop_all()
+#db.create_all()
 
 # filling DB with questions
 create_db()
@@ -22,6 +22,10 @@ def generate():
     db.add(user)
     db.commit()
     return render_template("index.html", key=key)
+
+@app.route('/key-info', methods=['GET'])
+def key():
+    return render_template('key-info.html')
 
 @app.route('/')
 def index():
@@ -175,7 +179,6 @@ def assessments():
 
 @app.route('/scores', methods=['GET'])
 def scores():
-
     session = request.cookies.get('session')
     user_object = db.query(User).filter_by(session_token=session).first()
     # get user results
@@ -188,7 +191,7 @@ def scores():
         test_object = db.query(Test).filter_by(id=result.test_id).first()
         result_container['score_percent'] = score_percent
         result_container['test_title'] = test_object.title
-        result_list.append(result_container)
+        result_list.insert(0, result_container)
 
     response = make_response(render_template("scores.html", result_list=result_list))
     return response

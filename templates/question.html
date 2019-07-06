@@ -1,36 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="content">
 <a class="home-button" href="/assessments"><span class="oi oi-home color" title="home" aria-hidden="true"></span></a>
+<div class="text-center">
+    <h5 style="border: 0">{{ question_title }}</h5>
+    <form action="/assessment/{{ test_name }}/{{ question_number+1 }}" method="post">
+        <div class="answers">
+            <div class="card question">
+                <label>
+                    <input name="question" type="radio" value="a1"/>
+                    <span>  {{ a1}}</span>
+                </label>
+            </div>
+            <div class="card question">
+                <label>
+                    <input name="question" type="radio" value="a2"/>
+                    <span>  {{ a2 }}</span>
+                </label>
+            </div>
+            <div class="card question">
+                <label>
+                    <input name="question" type="radio" value="a3"/>
+                    <span>  {{ a3 }}</span>
+                </label>
+            </div>
+        </div>
 
-<h6>{{ question_title }}</h6>
+        {% if last %}
 
-<form action="/assessment/{{ test_name }}/{{ question_number+1 }}" method="post">
-    <div class="answers">
-        <label>
-            <input name="question" type="radio" value="a1"/>
-            <span>  {{ a1 }}</span>
-        </label>
-        <label>
-            <input name="question" type="radio" value="a2"/>
-            <span>  {{ a2 }}</span>
-        </label>
-        <label>
-            <input name="question" type="radio" value="a3"/>
-            <span>  {{ a3 }}</span>
-        </label>
-    </div>
+        <button class="btn btn-outline-secondary" type="submit">Finish</button>
 
-    {% if last %}
+        {% else %}
 
-    <button type="submit">Finish</button>
+        <button class="btn btn-outline-primary" type="submit">Next</button>
 
-    {% else %}
-
-    <button type="submit">Next</button>
-
-    {% endif%}
-    </div>
-</form>
+        {% endif%}
+    </form>
+</div>
 {% endblock content %}
