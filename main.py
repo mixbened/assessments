@@ -8,7 +8,7 @@ from queries import create_db, save_result, get_results
 app = Flask(__name__)
 
 # database utilities
-#db.drop_all()
+# db.drop_all()
 # db.create_all()
 
 # filling DB with questions

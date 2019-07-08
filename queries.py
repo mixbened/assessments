@@ -1,8 +1,18 @@
 from models import User, Test, Question, db, Score
 import json
+import csv
 
 def create_db():
-    with open("questions.json", "r") as read_file:
+    csvFilePath = 'assessment_questions.csv'
+    jsonFilePath = 'questions.json'
+    data = []
+    with open(csvFilePath) as csvFile:
+        csvReader = csv.DictReader(csvFile)
+        for rows in csvReader:
+            data.append(rows)
+    with open(jsonFilePath, 'w+') as jsonFile:
+        jsonFile.write(json.dumps(data, indent=4))
+    with open(jsonFilePath, "r") as read_file:
         data = json.load(read_file)
         for entry in data:
             # print('Looking: ', entry['test'])
@@ -14,10 +24,14 @@ def create_db():
                 test_object = test
             question_object = db.query(Question).filter_by(title=entry['title']).first()
             # print('Found: ', question_object)
-            if question_object == None:
-                question = Question(title=entry['title'], a1=entry['a1'], a2=entry['a2'], a3=entry['a3'], correct=entry['correct'], test_id=test_object.id)
-                db.add(question)
-                db.commit()
+            if question_object != None:
+                # print('Found duplicate ', question_object)
+                db.delete(question_object)
+                question_object = db.query(Question).filter_by(title=entry['title']).first()
+                # print('Still there? ', question_object)
+            question = Question(title=entry['title'], a1=entry['a1'], a2=entry['a2'], a3=entry['a3'], correct=entry['correct'], test_id=test_object.id)
+            db.add(question)
+            db.commit()
 
 def save_result(session,test_id,questions_total,questions_correct):
     user_id = db.query(User).filter_by(session_token=session).first().id
