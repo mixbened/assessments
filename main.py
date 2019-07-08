@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # database utilities
 #db.drop_all()
-#db.create_all()
+db.create_all()
 
 # filling DB with questions
 create_db()
