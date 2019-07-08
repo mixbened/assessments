@@ -26,7 +26,7 @@ class Question(db.Model):
     a2 = db.Column(db.String)
     a3 = db.Column(db.String)
     correct = db.Column(db.String)
-    test_id = db.Column(db.String, db.ForeignKey('tests.id'))
+    test_id = db.Column(db.Integer, db.ForeignKey('tests.id'))
     def asdict(self):
         return {
             "id": self.id,
