@@ -14,8 +14,8 @@ class Test(db.Model):
 
 class Score(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.String, db.ForeignKey('users.id'))
-    test_id = db.Column(db.String, db.ForeignKey('tests.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    test_id = db.Column(db.Integer, db.ForeignKey('tests.id'))
     questions_total = db.Column(db.Integer)
     questions_correct = db.Column(db.Integer)
 
