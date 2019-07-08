@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # database utilities
 #db.drop_all()
-db.create_all()
+# db.create_all()
 
 # filling DB with questions
 create_db()
@@ -29,6 +29,10 @@ def key():
 
 @app.route('/')
 def index():
+    session = request.cookies.get('session')
+    # if user is logged in, get key from db
+    if session:
+        return redirect(url_for('assessments'))
     return render_template('index.html')
 
 @app.route('/assessment/<test_name>', methods=['GET'])
