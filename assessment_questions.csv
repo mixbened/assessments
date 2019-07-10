@@ -1,3 +1,17 @@
 title,a1,a2,a3,correct,test
-Wofür steht HTML?,Hyptertext Markup Language,Hyperintensive Machine Learning,It's an akronym from the Inventors,a1,HTML & CSS Basics
-Welche HTML-Tags existieren?,h1 - navigation - footer,p - question - div,nav - section - footer,a3,HTML & CSS Basics
+Was bedeutet HTML?,Hyper Tropy  Markup Language,Hypertext Markup Language,Hyper Markup Logic,a2,HTML & CSS Basics
+Wofür wird HTML genutzt?,Struktur einer Website,Styling einer Website,Stamina einer Website,a1,HTML & CSS Basics
+Aus welchen 2 Teilen besteht ein HTML-Tag?,Anfang und Ende,Opening- und Closing-Tag,Opening- und Finishing-Tag,a2,HTML & CSS Basics
+Was steht im <head> Tag?,Nichts,Einzig Quellcode von Programmiersprachen wie Python Java,"Suchmaschineninformationen, Dateilinks, Zeichensatztypen",a3,HTML & CSS Basics
+Was steht im <body> Tag?,Die Struktur einer Website,Das Styling einer Website,Magischer Text,a1,HTML & CSS Basics
+Wie kann man Bilder mit Hilfe des <img>-Tags referenzieren?,Mit einem Hyperlink,Lokal und mit Hyperlink,Gar nicht,a2,HTML & CSS Basics
+Was ist die Besonderheit des <div>-Tag?,Er wird als Container verwendet ,Er kann nicht gestyled werden,Es gibt keinen ,a1,HTML & CSS Basics
+Wofür steht die Abkürzung CSS?,Cascading Style System,Cool Styling Sites,Cascading Stylesheets,a3,HTML & CSS Basics
+Wofür wird CSS unter anderem genutzt?,Layout einer Website,Struktur einer Website,Auswählen von Farben,a1,HTML & CSS Basics
+Was ist ein valider CSS-Selektor?,HTML Attribute,CSS Klassen,CSS Elemente,a2,HTML & CSS Basics
+Was ist eine CSS-Eigenschaft?,Eine CSS Eigenschaft ist z.B. font-family und bestimmt das Styling der Schriftart des Textes,Die Farbe eines Elements,Eine CSS Eigenschaft gibt es nicht,a1,HTML & CSS Basics
+Was sind margin und padding?,Außenabstand = padding & Innenabstand = margin,Außenabstand = margin & Innenabstand = negativ margin,Außenabstand = margin & Innenabstand = padding,a3,HTML & CSS Basics
+Was ist eine CSS-Hierarchie (Spezifizität)?,Die CSS-Hierarchie bezeichnet die Anzahl der Selektoren,Die CSS-Hierarchie zeigt bei mutliplen Stylinganweisungen welche Anweisung gewinnt,Die Anordnung der HTML Elemente,a2,HTML & CSS Basics
+Was ist eine Media-Query und wofür benötige ich sie?,Es ermöglicht verschiedene Styles für verschiedene Geräte,Es ist Teil der Datenspeicherung,Media Queries werden genutzt für Animationen,a1,HTML & CSS Basics
+Was ist ein Framework?,"Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für das Design","Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für die Programmierung",Ein Framework sind Programmierschnittstellen,a2,HTML & CSS Basics
+Was ist die Idee von Bootstrap?,Eine Art Bibliothek mit hilfreichen CSS Klassen,Eine Programmierschnittstelle für externe Daten,Ein Layout-Programm für einfachere Erstellung von Websites,a1,HTML & CSS Basics
