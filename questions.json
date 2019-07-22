@@ -1,0 +1,130 @@
+[
+    {
+        "title": "Was bedeutet HTML?",
+        "a1": "Hyper Tropy  Markup Language",
+        "a2": "Hypertext Markup Language",
+        "a3": "Hyper Markup Logic",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Wof\u00fcr wird HTML genutzt?",
+        "a1": "Struktur einer Website",
+        "a2": "Styling einer Website",
+        "a3": "Stamina einer Website",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Aus welchen 2 Teilen besteht ein HTML-Tag?",
+        "a1": "Anfang und Ende",
+        "a2": "Opening- und Closing-Tag",
+        "a3": "Opening- und Finishing-Tag",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was steht im <head> Tag?",
+        "a1": "Nichts",
+        "a2": "Einzig Quellcode von Programmiersprachen wie Python Java",
+        "a3": "Suchmaschineninformationen, Dateilinks, Zeichensatztypen",
+        "correct": "a3",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was steht im <body> Tag?",
+        "a1": "Die Struktur einer Website",
+        "a2": "Das Styling einer Website",
+        "a3": "Magischer Text",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Wie kann man Bilder mit Hilfe des <img>-Tags referenzieren?",
+        "a1": "Mit einem Hyperlink",
+        "a2": "Lokal und mit Hyperlink",
+        "a3": "Gar nicht",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist die Besonderheit des <div>-Tag?",
+        "a1": "Er wird als Container verwendet ",
+        "a2": "Er kann nicht gestyled werden",
+        "a3": "Es gibt keinen ",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Wof\u00fcr steht die Abk\u00fcrzung CSS?",
+        "a1": "Cascading Style System",
+        "a2": "Cool Styling Sites",
+        "a3": "Cascading Stylesheets",
+        "correct": "a3",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Wof\u00fcr wird CSS unter anderem genutzt?",
+        "a1": "Layout einer Website",
+        "a2": "Struktur einer Website",
+        "a3": "Ausw\u00e4hlen von Farben",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist ein valider CSS-Selektor?",
+        "a1": "HTML Attribute",
+        "a2": "CSS Klassen",
+        "a3": "CSS Elemente",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist eine CSS-Eigenschaft?",
+        "a1": "Eine CSS Eigenschaft ist z.B. font-family und bestimmt das Styling der Schriftart des Textes",
+        "a2": "Die Farbe eines Elements",
+        "a3": "Eine CSS Eigenschaft gibt es nicht",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was sind margin und padding?",
+        "a1": "Au\u00dfenabstand = padding & Innenabstand = margin",
+        "a2": "Au\u00dfenabstand = margin & Innenabstand = negativ margin",
+        "a3": "Au\u00dfenabstand = margin & Innenabstand = padding",
+        "correct": "a3",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist eine CSS-Hierarchie (Spezifizit\u00e4t)?",
+        "a1": "Die CSS-Hierarchie bezeichnet die Anzahl der Selektoren",
+        "a2": "Die CSS-Hierarchie zeigt bei mutliplen Stylinganweisungen welche Anweisung gewinnt",
+        "a3": "Die Anordnung der HTML Elemente",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist eine Media-Query und wof\u00fcr ben\u00f6tige ich sie?",
+        "a1": "Es erm\u00f6glicht verschiedene Styles f\u00fcr verschiedene Ger\u00e4te",
+        "a2": "Es ist Teil der Datenspeicherung",
+        "a3": "Media Queries werden genutzt f\u00fcr Animationen",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist ein Framework?",
+        "a1": "Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden k\u00f6nnen f\u00fcr das Design",
+        "a2": "Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden k\u00f6nnen f\u00fcr die Programmierung",
+        "a3": "Ein Framework sind Programmierschnittstellen",
+        "correct": "a2",
+        "test": "HTML & CSS Basics"
+    },
+    {
+        "title": "Was ist die Idee von Bootstrap?",
+        "a1": "Eine Art Bibliothek mit hilfreichen CSS Klassen",
+        "a2": "Eine Programmierschnittstelle f\u00fcr externe Daten",
+        "a3": "Ein Layout-Programm f\u00fcr einfachere Erstellung von Websites",
+        "correct": "a1",
+        "test": "HTML & CSS Basics"
+    }
+]

@@ -22,16 +22,21 @@ def create_db():
                 test = Test(title=entry['test'])
                 db.add(test)
                 test_object = test
+            new_question = Question(title=entry['title'], a1=entry['a1'], a2=entry['a2'], a3=entry['a3'], correct=entry['correct'], test_id=test_object.id)
+            # case the question exists
             question_object = db.query(Question).filter_by(title=entry['title']).first()
-            # print('Found: ', question_object)
             if question_object != None:
-                # print('Found duplicate ', question_object)
+                print('Found duplicate ', question_object)
                 db.delete(question_object)
-                question_object = db.query(Question).filter_by(title=entry['title']).first()
-                # print('Still there? ', question_object)
-            question = Question(title=entry['title'], a1=entry['a1'], a2=entry['a2'], a3=entry['a3'], correct=entry['correct'], test_id=test_object.id)
-            db.add(question)
+                db.commit()
+                db.add(new_question)
+            # case the question does not exists
+            else:
+                db.add(new_question)
+
             db.commit()
+
+
 
 def save_result(session,test_id,questions_total,questions_correct):
     user_id = db.query(User).filter_by(session_token=session).first().id
