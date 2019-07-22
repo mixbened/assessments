@@ -26,7 +26,7 @@ def create_db():
             # case the question exists
             question_object = db.query(Question).filter_by(title=entry['title']).first()
             if question_object != None:
-                print('Found duplicate ', question_object)
+                # print('Found duplicate ', question_object)
                 db.delete(question_object)
                 db.commit()
                 db.add(new_question)
