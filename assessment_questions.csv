@@ -3,7 +3,7 @@ Was bedeutet HTML?,Hyper Tropy  Markup Language,Hypertext Markup Language,Hyper 
 Wofür wird HTML genutzt?,Struktur einer Website,Styling einer Website,Stamina einer Website,a1,HTML & CSS Basics
 Aus welchen 2 Teilen besteht ein HTML-Tag?,Anfang und Ende,Opening- und Closing-Tag,Opening- und Finishing-Tag,a2,HTML & CSS Basics
 Was steht im <head> Tag?,Nichts,Einzig Quellcode von Programmiersprachen wie Python Java,"Suchmaschineninformationen, Dateilinks, Zeichensatztypen",a3,HTML & CSS Basics
-Was steht im <body> Tag?,Die Struktur einer Website,Das Styling einer Website,Magischer Text,a1,HTML & CSS Basics
+Was steht im <body> Tag?,Elemente einer Website,Das Styling einer Website,Magischer Text,a1,HTML & CSS Basics
 Wie kann man Bilder mit Hilfe des <img>-Tags referenzieren?,Mit einem Hyperlink,Lokal und mit Hyperlink,Gar nicht,a2,HTML & CSS Basics
 Was ist die Besonderheit des <div>-Tag?,Er wird als Container verwendet ,Er kann nicht gestyled werden,Es gibt keinen ,a1,HTML & CSS Basics
 Wofür steht die Abkürzung CSS?,Cascading Style System,Cool Styling Sites,Cascading Stylesheets,a3,HTML & CSS Basics
@@ -15,3 +15,4 @@ Was ist eine CSS-Hierarchie (Spezifizität)?,Die CSS-Hierarchie bezeichnet die A
 Was ist eine Media-Query und wofür benötige ich sie?,Es ermöglicht verschiedene Styles für verschiedene Geräte,Es ist Teil der Datenspeicherung,Media Queries werden genutzt für Animationen,a1,HTML & CSS Basics
 Was ist ein Framework?,"Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für das Design","Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für die Programmierung",Ein Framework sind Programmierschnittstellen,a2,HTML & CSS Basics
 Was ist die Idee von Bootstrap?,Eine Art Bibliothek mit hilfreichen CSS Klassen,Eine Programmierschnittstelle für externe Daten,Ein Layout-Programm für einfachere Erstellung von Websites,a1,HTML & CSS Basics
+Wie erstelle ich eine Variable mit dem Wert 2?,var a: 2,a = 2,int a = 2,a2,Python Basics
