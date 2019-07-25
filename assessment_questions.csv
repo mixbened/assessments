@@ -16,3 +16,10 @@ Was ist eine Media-Query und wofür benötige ich sie?,Es ermöglicht verschiede
 Was ist ein Framework?,"Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für das Design","Ein Framework ist eine Art Baukasten mit Elementen, die verwendet werden können für die Programmierung",Ein Framework sind Programmierschnittstellen,a2,HTML & CSS Basics
 Was ist die Idee von Bootstrap?,Eine Art Bibliothek mit hilfreichen CSS Klassen,Eine Programmierschnittstelle für externe Daten,Ein Layout-Programm für einfachere Erstellung von Websites,a1,HTML & CSS Basics
 Wie erstelle ich eine Variable mit dem Wert 2?,var a: 2,a = 2,int a = 2,a2,Python Basics
+Welchen Datentyp gibt es nicht(!) in Python?,float,number,integer,int a = 2,a2,Python Basics
+Welche Funktion benutzt man um Daten in der Konsole anzuzeigen?,echo,output,print,a3,Python Basics
+Wie stelle ich eine Integer Variable (a) als String dar?,str(a),castToString(a),int(a),a1,Python Basics
+Was ist eine valide Bedingung?,a = 5,a >= 2,'Tim' == 'Tim',a2,Python Basics
+Wie kann Input vom Nutzer aus der Konsole erfasst werden?, print(), enter(), input(),a3,Python Basics
+Was ist ein Loop?, ein Block Code wird öfter ausgeführt, ein Programm läuft durchgehend, die Art ein Porgramm zu starten,a1,Python Basics
+Wähle den richtigen Syntax für ein If Statement, if True:, if(a > b):, if 5 == 5,a1,Python Basics
