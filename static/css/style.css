@@ -114,7 +114,14 @@ h5 {
     color: green;
 }
 
-@media (max-width: 768px){
+@media (max-width: 980px){
+    body {
+        font-size: 2em;
+    }
+
+    h2, h3, h4, h5, h6, p, .btn {
+        font-size: 1.5em;
+    }
     .container {
         width: 100%;
     }
@@ -124,5 +131,8 @@ h5 {
     .question {
         width: 90%;
         margin: 1em auto;
+    }
+    .content {
+        padding: 5em 0;
     }
 }
