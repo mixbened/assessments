@@ -2,8 +2,7 @@ from models import User, Test, Question, db, Score
 import json
 import csv
 
-def create_db():
-    csvFilePath = 'assessment_questions.csv'
+def create_db(csvFilePath):
     jsonFilePath = 'questions.json'
     data = []
     with open(csvFilePath) as csvFile:
@@ -33,7 +32,6 @@ def create_db():
             # case the question does not exists
             else:
                 db.add(new_question)
-
             db.commit()
 
 

@@ -33,7 +33,7 @@
     },
     {
         "title": "Was steht im <body> Tag?",
-        "a1": "Elemente einer Website",
+        "a1": "Die Struktur einer Website",
         "a2": "Das Styling einer Website",
         "a3": "Magischer Text",
         "correct": "a1",

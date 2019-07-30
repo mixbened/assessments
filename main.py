@@ -4,15 +4,14 @@ import uuid
 import random
 import string
 from queries import create_db, save_result, get_results
+from os import curdir
+from os.path import join as pjoin
 
 app = Flask(__name__)
 
 # database utilities
 #db.drop_all()
 #db.create_all()
-
-# filling DB with questions
-create_db()
 
 @app.route('/generate', methods=['GET'])
 def generate():
@@ -199,6 +198,29 @@ def scores():
 
     response = make_response(render_template("scores.html", result_list=result_list))
     return response
+
+@app.route('/admin/ben', methods=["GET"])
+def admin():
+    response = make_response(render_template("admin.html"))
+    return response
+
+
+@app.route('/update-db', methods=["POST"])
+def update_db():
+    # get CSV File and save it to the server system
+    file = request.files['csvFile']
+    # print(file.filename)
+
+    csv_name = 'assessments.csv'
+
+    store_path = pjoin(curdir, csv_name)
+
+    file.save(store_path)
+
+    # call function to update DB with CSV File Path
+    create_db(csv_name)
+
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run()
