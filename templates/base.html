@@ -2,7 +2,7 @@
 <html lang="de">
     <head>
         <meta charset="UTF-8">
-        <title>SmartNinja Assessment</title>
+        <title>START.Code Assessments</title>
         <link href="{{ url_for('static', filename='../static/css/font_iconic/css/open-iconic-bootstrap.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/bootstrap.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../static/css/style.css')}}">
@@ -11,7 +11,7 @@
     <body>
     <nav class="row align-items-center">
         <div class="col-4">
-            <h2>Start.Code</h2>
+            <img id="logo" src="{{ url_for('static', filename='../static/img/start.code.png')}}" alt="start.code logo">
         </div>
         <div class="col-8">
             {% if test %}

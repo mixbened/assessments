@@ -27,7 +27,7 @@ iframe {
 nav {
     /*background: #2a3758;*/
     border-bottom: 1px solid lightgrey;
-    padding: 1%;
+    padding: 0;
     display: flex;
 }
 
@@ -71,7 +71,7 @@ h4 {
 #logo {
     float: left;
     width: 50%;
-    max-width: 200px;
+    max-width: 150px;
 }
 
 .btn-outline-success {
@@ -123,10 +123,10 @@ h5 {
         font-size: 1.5em;
     }
     .container {
-        width: 100%;
+        max-width: 100%;
     }
     #logo {
-        width: 90%;
+        width: 200px;
     }
     .question {
         width: 90%;
