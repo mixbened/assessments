@@ -192,7 +192,7 @@ def scores():
         result_container = {}
         score_percent = str((result.questions_correct / result.questions_total) * 100)
         test_object = db.query(Test).filter_by(id=result.test_id).first()
-        result_container['score_percent'] = score_percent
+        result_container['score_percent'] = score_percent[:2]
         result_container['test_title'] = test_object.title
         result_list.insert(0, result_container)
 
