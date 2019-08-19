@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <form method="post" action="/update-db" enctype="multipart/form-data">
+        <form class="container" method="post" action="/update-db" enctype="multipart/form-data">
             <input class="form-control key-input" type="file" name="csvFile">
             <button class="btn btn-outline-secondary" type="submit">Update Database</button>
         </form>

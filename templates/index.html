@@ -1,25 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <form method="post" action="/assessments">
-            <input type="text" name="id" class="form-control key-input" placeholder="Enter a Key" required>
-            <button class="btn btn-info" type="submit">Start</button>
-        </form>
-        <form style="display: inline;" method="get" action="/generate">
-            <button  data-toggle="popover" class="btn btn-outline-secondary" title="Was mache ich mit dem Key?" data-content="Bei uns gibt es keine Login-Daten wie Benutzername oder Passwort. Du kannst dir einen Key generieren" type="submit">Generate Key</button>
-        </form>
-{% if key %}
+<header class="hero">
+    <img src="../static/img/icons8-unter-computer-96.png" class="icon"/>
+    <h1 style="text-align: center;justify-content: center; text-transform: uppercase; color: #2a3758; margin-top: 1em;">Teste deine Coding-Skills</h1>
+</header>
+<div class="container mt-5">
+    <form method="post" action="/assessments">
+        <input type="text" name="id" class="form-control key-input" placeholder="Enter a Key" required>
+        <button class="btn btn-info" type="submit">Start</button>
+    </form>
+    <form style="display: inline;" method="get" action="/generate">
+        <button  data-toggle="popover" class="btn btn-outline-secondary" title="Was mache ich mit dem Key?" data-content="Bei uns gibt es keine Login-Daten wie Benutzername oder Passwort. Du kannst dir einen Key generieren" type="submit">Generate Key</button>
+    </form>
+    {% if key %}
 
-<div class="alert alert-primary" role="alert">
-  This is your key: <span class="badge badge-success">{{ key }}</span> - Save it somewhere <a style="text-decoration: underline; color: white;" href="/key-info">more Info</a>
+    <div class="alert alert-primary" role="alert">
+      This is your key: <span class="badge badge-success">{{ key }}</span> - Save it somewhere <a style="text-decoration: underline; color: white;" href="/key-info">more Info</a>
+    </div>
+
+    {% endif %}
+
+    {% if error %}
+
+    <script>alert({{ error }})</script>
+
+    {% endif %}
 </div>
-
-{% endif %}
-
-{% if error %}
-
-<script>alert({{ error }})</script>
-
-{% endif %}
 
 {% endblock content %}

@@ -2,7 +2,7 @@
 
 {% block content %}
 <a class="home-button" href="/assessments"><span class="oi oi-home color" title="home" aria-hidden="true"></span></a>
-<div class="text-center">
+<div class="text-center mt-5">
     <h5 style="border: 0">{{ question_title }}</h5>
     <form action="/assessment/{{ test_name }}/{{ question_number+1 }}" method="post">
         <div class="answers">

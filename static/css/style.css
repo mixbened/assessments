@@ -63,8 +63,8 @@ h4 {
 }
 
 .question {
-    margin: 4% auto;
-    padding: 2%;
+    margin: 3% auto;
+    padding: 1%;
     width: 50%;
 }
 
@@ -112,6 +112,16 @@ h5 {
 
 .test {
     color: green;
+}
+
+.hero {
+    min-height: 30vh;
+    padding-top: 5em;
+    text-align: center;
+}
+
+.icon {
+    display: inline;
 }
 
 @media (max-width: 980px){
