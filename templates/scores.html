@@ -11,22 +11,47 @@
 
         <a class="list-group-item">
           <div class="row align-items-center">
-            <div class="col-6">
+            <div id="certificateTitle" class="col-6">
               {{ result.test_title }}
             </div>
-            <div class="col-6">
+            <div class="col-3">
               <div class="progress">
                 <div class="progress-bar bg-warning" role="progressbar" style="width: {{ result.score_percent }}%" aria-valuenow="{{ result.score_percent }}" aria-valuemin="0" aria-valuemax="100">{{ result.score_percent }}%</div>
               </div>
             </div>
+            <div class="col-3 text-right">
+              {% if result.score_percent > 80 %}
+              <button id="createCertificate" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Certificate
+              </button>
+              {% endif %}
+            </div>
           </div>
 
         </a>
-
-    </div>
-
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Download Certificate</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form action="/certificate" method="post">
+              <div class="modal-body">
+                <input type="hidden" name="assessment" value="{{ result.test_title }}">
+                <input type="text" class="form-control" name="name" placeholder="Type in Name (e.g: Max Mustermann)">
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Get Certificate</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
   {% endfor %}
 
 </div>
-
 {% endblock content %}

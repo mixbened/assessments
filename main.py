@@ -3,7 +3,7 @@ from models import User, Test, Question, db, Score
 import uuid
 import random
 import string
-from queries import create_db, save_result, get_results
+from queries import create_db, save_result, get_results, get_certificate
 from os import curdir
 from os.path import join as pjoin
 
@@ -192,7 +192,11 @@ def scores():
         result_container = {}
         score_percent = str((result.questions_correct / result.questions_total) * 100)
         test_object = db.query(Test).filter_by(id=result.test_id).first()
-        result_container['score_percent'] = score_percent[:2]
+        # shorten percent if not 100 (more than 2 digits)
+        if score_percent != '100.0':
+            result_container['score_percent'] = int(score_percent[:2])
+        else:
+            result_container['score_percent'] = int(score_percent)
         result_container['test_title'] = test_object.title
         result_list.insert(0, result_container)
 
@@ -204,6 +208,14 @@ def admin():
     response = make_response(render_template("admin.html"))
     return response
 
+@app.route('/certificate', methods=["POST"])
+def certificate():
+    name = request.form.get("name")
+    assessment = request.form.get("assessment")
+    print('Values: ', name, assessment)
+    url = get_certificate(name, assessment)
+    response = make_response(render_template("download.html", url=url))
+    return response
 
 @app.route('/update-db', methods=["POST"])
 def update_db():

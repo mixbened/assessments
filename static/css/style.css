@@ -124,6 +124,16 @@ h5 {
     display: inline;
 }
 
+.btn-primary {
+    background-color: #3fbebc;
+    border-color: #3fbebc
+}
+
+.btn-primary:hover {
+    background-color: #31d4d1;
+    border-color: #31d4d1
+}
+
 @media (max-width: 980px){
     body {
         font-size: 2em;

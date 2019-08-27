@@ -1,4 +1,5 @@
 from models import User, Test, Question, db, Score
+from pdfgeneratorapi import PDFGenerator
 import json
 import csv
 
@@ -46,6 +47,13 @@ def get_results(id):
     scores = db.query(Score).filter_by(user_id=id).all()
     count = len(scores)
     return count, scores
+
+def get_certificate(name, assessment):
+    pdf_client = PDFGenerator(api_key='58491fd517d41c9cf0233acd38f4c900bdaedc8d3622e34ff60925a7d188d2eb', api_secret='426102c7b00afc1f5202fd8280fff25ce8d9349b0c929f7e7f6ec09929b4c188')
+    pdf_client.set_workspace('benedikt.mix@startplatz.de')
+    new_pdf = pdf_client.create_document(template_id=55970, data={"name": name, "assessment": assessment}, document_format="pdf",response_format="url")
+    return new_pdf.response
+
 
 if __name__ == '__main__':
     main()
