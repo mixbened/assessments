@@ -5,9 +5,11 @@ import random
 import string
 from queries import create_db, save_result, get_results, get_certificate
 from os import curdir
+from flask_sslify import SSLify
 from os.path import join as pjoin
 
 app = Flask(__name__)
+sslify = SSLify(app)
 
 # database utilities
 #db.drop_all()
