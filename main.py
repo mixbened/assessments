@@ -198,7 +198,7 @@ def scores():
         if score_percent != '100.0':
             result_container['score_percent'] = int(score_percent[:2])
         else:
-            result_container['score_percent'] = '100'
+            result_container['score_percent'] = 100
         result_container['test_title'] = test_object.title
         result_list.insert(0, result_container)
 
